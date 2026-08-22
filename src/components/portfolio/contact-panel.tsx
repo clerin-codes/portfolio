@@ -1,4 +1,4 @@
-import { GitFork, Mail, MapPin, Network } from "lucide-react";
+import { Camera, GitFork, Mail, MapPin, Network, Users } from "lucide-react";
 import { profile, socialLinks } from "@/data/portfolio";
 import { SectionShell } from "@/components/layout/section-shell";
 import { InteractiveTerminal } from "@/components/terminal/interactive-terminal";
@@ -6,11 +6,11 @@ import { TerminalWindow } from "@/components/terminal/terminal-window";
 import { TerminalButton } from "@/components/ui/terminal-button";
 import { ExternalLink } from "@/components/ui/external-link";
 
-const iconMap = { github: GitFork, linkedin: Network, mail: Mail };
+const iconMap = { github: GitFork, linkedin: Network, instagram: Camera, facebook: Users, mail: Mail };
 
 export function ContactPanel() {
   return (
-    <SectionShell id="contact" index="05" eyebrow="open /dev/communication" title="Start a conversation" description="Have a project, opportunity, or technical idea to discuss? The public channels below are the fastest way to connect.">
+    <SectionShell id="contact" index="@" eyebrow="open /dev/communication" title="Start a conversation" description="Have a project, opportunity, or technical idea to discuss? The public channels below are the fastest way to connect.">
       <div className="contact-grid">
         <TerminalWindow title="contact.sock" path="~/network/public">
           <p className="contact-prompt"><span>clerin@portfolio:~$</span> echo &quot;Let&apos;s build something useful.&quot;</p>
@@ -32,7 +32,7 @@ export function ContactPanel() {
               );
             })}
           </address>
-          <p className="privacy-note">PUBLIC_CHANNELS_ONLY // Email · LinkedIn · GitHub</p>
+          <p className="privacy-note">PUBLIC_CHANNELS_ONLY // Email · LinkedIn · GitHub · Instagram · Facebook</p>
         </TerminalWindow>
         <InteractiveTerminal />
       </div>

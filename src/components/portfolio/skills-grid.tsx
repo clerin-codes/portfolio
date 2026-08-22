@@ -4,7 +4,7 @@ import { TerminalWindow } from "@/components/terminal/terminal-window";
 
 export function SkillsGrid() {
   return (
-    <SectionShell id="skills" index="02" eyebrow="tree ./skills --depth=2" title="Technical skills" description="Technologies grouped by the work they support—without arbitrary proficiency scores.">
+    <SectionShell id="skills" index="./" eyebrow="tree ./skills --depth=2" title="Technical skills" description="Technologies grouped by the work they support—without arbitrary proficiency scores.">
       <div className="skills-grid">
         {skillGroups.map((group, index) => (
           <TerminalWindow key={group.title} title={`proc_${String(index + 1).padStart(2, "0")}`} path={`~/skills/${group.title.toLowerCase().replaceAll(" ", "-")}`}>

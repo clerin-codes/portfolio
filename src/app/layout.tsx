@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { JetBrains_Mono } from "next/font/google";
 import { BootSequence } from "@/components/terminal/boot-sequence";
 import { LOCAL_URL, SITE_URL } from "@/lib/constants";
+import { THEME_INIT_SCRIPT } from "@/lib/theme";
 import "./globals.css";
 
 const jetBrainsMono = JetBrains_Mono({
@@ -41,13 +42,19 @@ export const metadata: Metadata = {
 export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
-  themeColor: "#0a0a0a",
-  colorScheme: "dark",
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "#effaf1" },
+    { media: "(prefers-color-scheme: dark)", color: "#051007" },
+  ],
+  colorScheme: "light dark",
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en" className={jetBrainsMono.variable} suppressHydrationWarning>
+      <head>
+        <script id="theme-init" dangerouslySetInnerHTML={{ __html: THEME_INIT_SCRIPT }} />
+      </head>
       <body suppressHydrationWarning>
         <BootSequence />
         <div className="scanlines" aria-hidden="true" />

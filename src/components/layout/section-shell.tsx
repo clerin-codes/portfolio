@@ -13,7 +13,7 @@ export function SectionShell({ id, index, eyebrow, title, description, children 
   return (
     <section id={id} className="section-shell" aria-labelledby={`${id}-heading`}>
       <div className="section-heading">
-        <div className="section-index" aria-hidden="true">/{index}</div>
+        <div className="section-index" aria-hidden="true">{index}</div>
         <div>
           <p className="eyebrow">{eyebrow}</p>
           <h2 id={`${id}-heading`}>{title}</h2>

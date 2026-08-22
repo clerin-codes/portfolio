@@ -14,8 +14,8 @@ export function Hero() {
       <div className="hero-grid">
         <TerminalWindow title="zsh — identity" path="~/portfolio/whoami" className="hero-terminal">
           <div className="identity-plate" aria-hidden="true">
-            <span>┌─ CB / FULL-STACK + MOBILE ─┐</span>
-            <span>└─ SLIIT // LK // BUILDING ──┘</span>
+            <span>┌─ CB / FULL-STACK + MOBILE ──┐</span>
+            <span>└─ SLIIT // LK // BUILDING  .──┘</span>
           </div>
           <p className="command-line"><span>user@portfolio:~$</span> whoami</p>
           <p className="hero-kicker">Hello, I&apos;m</p>

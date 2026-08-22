@@ -6,7 +6,7 @@ import { TerminalWindow } from "@/components/terminal/terminal-window";
 
 export function About() {
   return (
-    <SectionShell id="about" index="01" eyebrow="cat ./profile.md" title="About" description="A developer profile built around practical problem solving, collaborative delivery, and continuous learning.">
+    <SectionShell id="about" index="<>" eyebrow="cat ./profile.md" title="About" description="A developer profile built around practical problem solving, collaborative delivery, and continuous learning.">
       <div className="about-grid">
         <TerminalWindow title="profile.md" path="~/about/identity">
           <div className="about-copy">

@@ -5,7 +5,7 @@ import { TerminalWindow } from "@/components/terminal/terminal-window";
 
 export function Education() {
   return (
-    <SectionShell id="education" index="04" eyebrow="git log --education --certifications" title="Education + certifications">
+    <SectionShell id="education" index="::" eyebrow="git log --education --certifications" title="Education + certifications">
       <div className="education-grid">
         <TerminalWindow title="education.log" path="~/records/academic">
           <ol className="timeline">

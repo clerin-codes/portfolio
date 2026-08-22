@@ -14,6 +14,8 @@ export const profile = {
   role: "Software Engineering Undergraduate",
   location: "Malabe, Colombo, Sri Lanka",
   email: "clerinb15@gmail.com",
+  phone: "+94 75 976 7730",
+  phoneHref: "tel:+94759767730",
   summary:
     "BSc (Hons) in Information Technology undergraduate at SLIIT, focused on Software Engineering. I build full-stack web and mobile applications with practical, maintainable technologies.",
   introduction:
@@ -36,12 +38,12 @@ export const profile = {
 } as const;
 
 export const navigation = [
-  { label: "Home", href: "#home" },
-  { label: "About", href: "#about" },
-  { label: "Skills", href: "#skills" },
-  { label: "Projects", href: "#projects" },
-  { label: "Education", href: "#education" },
-  { label: "Contact", href: "#contact" },
+  { label: "Home", href: "#home", prefix: "{", suffix: "}" },
+  { label: "About", href: "#about", prefix: "<", suffix: "/>" },
+  { label: "Skills", href: "#skills", prefix: "[", suffix: "]" },
+  { label: "Projects", href: "#projects", prefix: "(", suffix: ")" },
+  { label: "Education", href: "#education", prefix: "::", suffix: "::" },
+  { label: "Contact", href: "#contact", prefix: "@", suffix: "" },
 ] as const;
 
 export const socialLinks: SocialLink[] = [
@@ -51,6 +53,8 @@ export const socialLinks: SocialLink[] = [
     href: "https://www.linkedin.com/in/clerin-balakrishnan/",
     icon: "linkedin",
   },
+  { label: "Instagram", href: "https://www.instagram.com/sheron_clerin/", icon: "instagram" },
+  { label: "Facebook", href: "https://web.facebook.com/sheron.clerin", icon: "facebook" },
   { label: "Email", href: "mailto:clerinb15@gmail.com", icon: "mail" },
 ];
 
